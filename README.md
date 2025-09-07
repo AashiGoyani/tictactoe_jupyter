@@ -16,6 +16,7 @@ This repository contains comprehensive reinforcement learning experiments analyz
 |------|---------|-----------------|
 | `tictactoe_experiments.ipynb` | Basic RL experiments | Alpha comparison (0.01, 0.1, 0.5, 0.99), agent vs random evaluation |
 | `tictactoe_position_analysis.ipynb` | **Main analysis notebook** | Position switching experiments, role reversal analysis, comprehensive graphs |
+| `tictactoe_position_analysis_10x.ipynb` | **Extended training analysis** | 10x training (100,000 episodes), trained vs role-switched analysis, single agent (α=0.99) |
 
 
 
@@ -31,6 +32,7 @@ This repository contains comprehensive reinforcement learning experiments analyz
 - **Purpose**: Test how learning rates affect agent performance
 - **Alpha values tested**: 0.01, 0.1, 0.5, 0.99
 - **Training**: 10,000 episodes against teachers (90% optimal play)
+- **Extended Training**: 100,000 episodes (10x) for deeper analysis
 - **Evaluation**: Performance vs random players every 10 episodes
 
 ### **2. Position/Role Switching Analysis**
@@ -62,7 +64,8 @@ This repository contains comprehensive reinforcement learning experiments analyz
 
 ### **1. Start with the Main Analysis**
 ```
-📊 View: tictactoe_position_analysis.ipynb (main experiments with position switching graphs)
+📊 Main: tictactoe_position_analysis.ipynb (main experiments with position switching graphs)
+🚀 Extended: tictactoe_position_analysis_10x.ipynb (10x training for deeper analysis)
 🧪 Basic: tictactoe_experiments.ipynb (basic alpha comparison experiments)
 ```
 
@@ -70,6 +73,7 @@ This repository contains comprehensive reinforcement learning experiments analyz
 ```
 🧪 Basic experiments: tictactoe_experiments.ipynb
 🔬 Position analysis: tictactoe_position_analysis.ipynb
+🚀 Extended training: tictactoe_position_analysis_10x.ipynb
 ```
 
 ### **3. Understand Implementation**
