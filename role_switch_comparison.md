@@ -12,40 +12,22 @@
 #### Agent X Position Advantage - 100K Training
 ![Agent X 100K Training](./photos/agent_x_100k_training.png)
 
-**Key Visual Observations (100K Training - Agent X):**
-- **α = 0.01**: 49% final advantage - red line ~95%, green line ~46% - extremely stable
-- **α = 0.1**: 44% final advantage - red line ~95%, green line ~51% - occasional dips
-- **α = 0.5**: 38% final advantage - red line ~90%, green line ~52% - moderate volatility
-- **α = 0.99**: 22% final advantage - red line ~85%, green line ~63% - high volatility, best adaptability
 
 #### Agent O Position Analysis - 100K Training  
 ![Agent O 100K Training](./photos/agent_o_100k_training.png)
 
-**Key Visual Observations (100K Training - Agent O):**
-- **α = 0.01**: -0% position benefit - blue line ~80%, green line ~80% - exceptional normal position development
-- **α = 0.1**: 21% position benefit - blue line ~65%, green line ~86% - consistent performance
-- **α = 0.5**: 17% position benefit - blue line ~58%, green line ~75% - balanced improvement
-- **α = 0.99**: 31% position benefit - blue line ~54%, green line ~85% - highest adaptability gain
 
 ### 10K Training Results (Standard Training)
 
 #### Agent X Position Advantage - 10K Training
 ![Agent X 10K Training](./photos/agent_x_10k_training.png)
 
-**Key Visual Observations (10K Training - Agent X):**
-- **α = 0.01**: 40% final advantage - red line ~95%, green line ~55% - still converging
-- **α = 0.1**: 34% final advantage - red line ~90%, green line ~56% - near complete convergence  
-- **α = 0.5**: 30% final advantage - red line ~85%, green line ~55% - moderate stability
-- **α = 0.99**: 36% final advantage - red line ~88%, green line ~52% - high volatility
+
 
 #### Agent O Position Analysis - 10K Training
 ![Agent O 10K Training](./photos/agent_o_10k_training.png)
 
-**Key Visual Observations (10K Training - Agent O):**
-- **α = 0.01**: 33% position benefit - blue line ~55%, green line ~88% - gradual improvement
-- **α = 0.1**: 21% position benefit - blue line ~65%, green line ~86% - stable learning
-- **α = 0.5**: 33% position benefit - blue line ~55%, green line ~88% - moderate development
-- **α = 0.99**: 34% position benefit - blue line ~54%, green line ~88% - high volatility
+
 
 ### Visual Comparison: 100K vs 10K Training
 
@@ -60,16 +42,16 @@
 
 ### Normal Position (Playing First) vs Role Switch (Playing Second)
 
-| Learning Rate | Training Duration | Normal Position | Role Switch | Advantage Lost |
-|---------------|-------------------|-----------------|-------------|----------------|
-| **α = 0.01**  | 10K episodes     | ~95%           | ~55%        | **40%**        |
-|               | 100K episodes    | ~95%           | ~46%        | **49%** ⬇️     |
-| **α = 0.1**   | 10K episodes     | ~90%           | ~56%        | **34%**        |
-|               | 100K episodes    | ~95%           | ~51%        | **44%** ⬇️     |
-| **α = 0.5**   | 10K episodes     | ~85%           | ~55%        | **30%**        |
-|               | 100K episodes    | ~90%           | ~52%        | **38%** ⬇️     |
-| **α = 0.99**  | 10K episodes     | ~88%           | ~52%        | **36%**        |
-|               | 100K episodes    | ~85%           | ~63%        | **22%** ⬆️     |
+| Learning Rate | Training Duration | Normal Position | Role Switch |
+|---------------|-------------------|-----------------|-------------|
+| **α = 0.01**  | 10K episodes     | ~95%           | ~55%        |
+|               | 100K episodes    | ~95%           | ~46%        |
+| **α = 0.1**   | 10K episodes     | ~90%           | ~56%        |
+|               | 100K episodes    | ~95%           | ~51%        |
+| **α = 0.5**   | 10K episodes     | ~85%           | ~55%        |
+|               | 100K episodes    | ~90%           | ~52%        |
+| **α = 0.99**  | 10K episodes     | ~88%           | ~52%        |
+|               | 100K episodes    | ~85%           | ~63%        |
 
 
 
@@ -84,16 +66,16 @@
 
 ### Normal Position (Playing Second) vs Role Switch (Playing First)
 
-| Learning Rate | Training Duration | Normal Position | Role Switch | Benefit Gained |
-|---------------|-------------------|-----------------|-------------|----------------|
-| **α = 0.01**  | 10K episodes     | ~55%           | ~88%        | **+33%**       |
-|               | 100K episodes    | ~80%           | ~80%        | **+0%** ⬇️     |
-| **α = 0.1**   | 10K episodes     | ~65%           | ~86%        | **+21%**       |
-|               | 100K episodes    | ~65%           | ~86%        | **+21%** ➡️    |
-| **α = 0.5**   | 10K episodes     | ~55%           | ~88%        | **+33%**       |
-|               | 100K episodes    | ~58%           | ~75%        | **+17%** ⬇️    |
-| **α = 0.99**  | 10K episodes     | ~54%           | ~88%        | **+34%**       |
-|               | 100K episodes    | ~54%           | ~85%        | **+31%** ⬇️    |
+| Learning Rate | Training Duration | Normal Position | Role Switch |
+|---------------|-------------------|-----------------|-------------|
+| **α = 0.01**  | 10K episodes     | ~55%           | ~88%        |
+|               | 100K episodes    | ~80%           | ~80%        |
+| **α = 0.1**   | 10K episodes     | ~65%           | ~86%        |
+|               | 100K episodes    | ~65%           | ~86%        |
+| **α = 0.5**   | 10K episodes     | ~55%           | ~88%        |
+|               | 100K episodes    | ~58%           | ~75%        |
+| **α = 0.99**  | 10K episodes     | ~54%           | ~88%        |
+|               | 100K episodes    | ~54%           | ~85%        |
 
 ### Key Findings for Agent O:
 - **O agents LOVE playing first** (big performance boost)
