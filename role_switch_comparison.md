@@ -5,6 +5,57 @@
 - **Agent O**: Trained to play second, tested playing first
 - **Purpose**: See how well agents adapt to opposite positions
 
+## Visual Analysis: Training Comparison Graphs
+
+### 100K Training Results (Extended Training)
+
+#### Agent X Position Advantage - 100K Training
+![Agent X 100K Training](./photos/agent_x_100k_training.png)
+
+**Key Visual Observations (100K Training - Agent X):**
+- **α = 0.01**: 43% final advantage - extremely stable red line, consistent green line
+- **α = 0.1**: 42% final advantage - quick convergence with occasional performance dips
+- **α = 0.5**: 42% final advantage - moderate volatility throughout training
+- **α = 0.99**: 34% final advantage - high volatility, best second-position performance
+
+#### Agent O Position Analysis - 100K Training  
+![Agent O 100K Training](./photos/agent_o_100k_training.png)
+
+**Key Visual Observations (100K Training - Agent O):**
+- **α = 0.01**: 12% position benefit - blue line reaches 80%+, exceptional normal position development
+- **α = 0.1**: 12% position benefit - consistent performance in both positions
+- **α = 0.5**: 39% position benefit - balanced improvement across positions
+- **α = 0.99**: 48% position benefit - highest adaptability gain, volatile patterns
+
+### 10K Training Results (Standard Training)
+
+#### Agent X Position Advantage - 10K Training
+![Agent X 10K Training](./photos/agent_x_10k_training.png)
+
+**Key Visual Observations (10K Training - Agent X):**
+- **α = 0.01**: 40% final advantage - still converging, not fully specialized
+- **α = 0.1**: 34% final advantage - near complete convergence
+- **α = 0.5**: 12% final advantage - quick learning but less stable
+- **α = 0.99**: 36% final advantage - high volatility, rapid adaptation
+
+#### Agent O Position Analysis - 10K Training
+![Agent O 10K Training](./photos/agent_o_10k_training.png)
+
+**Key Visual Observations (10K Training - Agent O):**
+- **α = 0.01**: 33% position benefit - gradual improvement, not fully developed
+- **α = 0.1**: 21% position benefit - good balance, stable learning curve
+- **α = 0.5**: 33% position benefit - moderate development with some volatility
+- **α = 0.99**: 34% position benefit - quick adaptation with high volatility
+
+### Visual Comparison: 100K vs 10K Training
+
+**Key Differences Visible in Graphs:**
+
+1. **Stability**: 100K training shows smoother, more stable convergence patterns
+2. **Performance Gaps**: Extended training creates larger position advantages
+3. **Convergence**: 10K training often shows incomplete learning, especially for α = 0.01
+4. **Volatility**: α = 0.99 maintains high volatility regardless of training duration
+
 ## Agent X (First Player) Role Switch Analysis
 
 ### Normal Position (Playing First) vs Role Switch (Playing Second)
@@ -19,6 +70,9 @@
 |               | 100K episodes    | ~90%           | ~55%        | **35%** ⬇️     |
 | **α = 0.99**  | 10K episodes     | ~80%           | ~55%        | **25%**        |
 |               | 100K episodes    | ~85%           | ~60%        | **25%** ➡️     |
+
+
+
 
 ### Key Findings for Agent X:
 - **Extended training makes X MORE specialized** (worse at role switching)
